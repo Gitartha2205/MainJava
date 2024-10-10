@@ -1,0 +1,32 @@
+//Geethrth 
+// TI1169
+// Base class
+class GrandFather {
+    public void house() {
+        System.out.println("3 BHK House.");
+    }
+}
+
+// Intermediate class
+class Father extends GrandFather {
+    public void land() {
+        System.out.println("5 Acres of Land.");
+    }
+}
+
+// Derived class
+class Son extends Father {
+    public void car() {
+        System.out.println("Own Audi Car.");
+    }
+}
+
+// Main class to execute the program
+public class MultilevelInheritance {
+    public static void main(String[] args) {
+        Son son = new Son();
+        son.car();      // Calls method from Son
+        son.land();     // Calls method from Father
+        son.house();    // Calls method from GrandFather
+    }
+}
